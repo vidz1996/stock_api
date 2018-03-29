@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+<body>
+<div style="overflow-x:auto;">
+  <table>
+    <tr>
+      <th>Symbol</th>
+      <th>Date</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>   
+    </tr>
+    {% for i in sd %}
+    <tr>
+      <td>{{i.symbol}}</td>
+      <td>{{i.date}}</td>
+      <td>{{i.open}}</td>
+      <td>{{i.high}}</td>
+      <td>{{i.low}}</td>
+      <td>{{i.close}}</td>
+      <td>{{i.volume}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+
+</body>
+</html>
+
